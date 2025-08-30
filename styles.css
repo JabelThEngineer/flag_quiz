@@ -1,0 +1,257 @@
+html {
+    margin: 0;
+    overflow-x: hidden;
+    justify-items: center;
+}
+
+/* BODY SECTION */
+
+h1, h2, h3 {
+    color: #333;
+}
+
+body {
+    width: 90vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e7ecef;
+}
+
+/* HEADER */
+
+header {
+    padding: 2rem;
+    justify-items: center;
+}
+
+.breaking {
+    display: none;
+}
+
+.heading1 {
+    width: 90vw;
+    border-bottom: 2px solid grey;
+    justify-items: center;
+    font-size: 2rem;
+}
+
+header h2 {
+    margin: 2rem auto 1.5rem;
+}
+
+/* MAIN */
+
+main {
+    flex: 1; /* shortcut to flex grow,shrink,basis */
+    justify-items: center;
+}
+
+main p:first-of-type {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.questions {
+    width: 80%;
+    max-width: 1000px;
+    padding: 3rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #bdd8ed;
+}
+
+.questions_space h3 {
+    padding: 15px 0;
+    font-size: 1.4rem;
+}
+
+.questions_space img {
+    min-width: 50%;
+    max-width: 40%;
+    height: auto;
+    align-self: center;
+}
+
+.answers {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: stretch;
+    gap: 1rem;
+    font-size: 1.8rem;
+}
+
+.answers button { 
+    width: flex;
+    height: flex;
+    min-width: 100%;
+    max-width: 1000px;
+    padding: 25px 100px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: #6096BA;
+    color: #e7ecef;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.answers button:hover {
+    transform: scale(1.02);
+    background-color: #4f7b98;
+}
+
+.answers button:disabled {
+        cursor: not-allowed;
+        opacity: 0.9s;
+    }
+
+.answers button.correct {
+    background-color: #2ecc71 !important;   /* Used to overlap basic background-color*/
+    color: #e7ecef;
+}
+
+.answers button.wrong {
+    background-color: #e74c3c !important;   
+    color: #e7ecef;
+}
+
+.result {
+    width: 80%;
+    max-width: 1000px;
+    padding: 3rem;
+    border-radius: 10px;
+    display: none;
+    text-align: center;
+    background-color: #bdd8ed;
+}
+
+.result h2 {
+    text-align: center;
+}
+
+.restart_button {
+    width: flex;
+    height: flex;
+    min-width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 25px 100px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: #6096BA;
+    color: #e7ecef;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.restart_button:hover {
+    transform: scale(1.02);
+    background-color: #4f7b98;
+}
+
+/* FOOTER */
+
+footer {
+    height: 20%;
+    width: 100vw;
+    padding: 1rem;
+    margin: 0 0 calc(-8px) calc(-5vw); /* expanding footer's width over 90vw set in hierarchy */
+    border-radius: 20px 20px 0 0;
+    margin-top: 150px;
+    justify-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    background-color: #6096BA;
+}
+
+footer p {
+    width: 60vw;
+    max-width: 60ch;
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+footer h4 {
+    padding-top: 4rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 750px) {
+    .breaking {
+        display: inline;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    .questions_space {
+        max-width: 80vw;
+    }
+    
+    .questions_space img {
+        height: auto;
+        min-width: 50%;
+        max-width: 80%;
+        align-self: center;
+    }
+
+    .questions_space h3 {
+        text-align: center;
+    }
+
+    .answers {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: stretch;
+        font-size: 1.8rem;
+    }
+
+    .answers button {
+        min-width: 30%;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #e7ecef;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1200px) {
+    .breaking {
+        display: none;
+    }
+    
+    .questions_space {
+        max-width: 80vw;
+    }
+    
+    .questions_space img {
+        height: auto;
+        max-width: 50%;
+        align-self: center;
+    }
+
+    .questions_space h3 {
+        text-align: left;
+    }
+
+    .answers button {
+        min-width: 100%;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: #e7ecef;
+    }
+}
