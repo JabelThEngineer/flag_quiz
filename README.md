@@ -24,7 +24,8 @@ This project is a web-based quiz game for testing knowledge of country flags. It
 5. Click "restart" to play again.
 
 ## Demo
-![Demo](images/demo_screen.png)
+Project is deployed, so you can try it here:
+[Flag quiz live](https://JabelThEngineer.github.io/flag_quiz/)
 
 ## Author
 Kacper J.
